@@ -6,7 +6,9 @@ function CricketDetails({ navigation, route }: any) {
   const { match } = route.params;
   const { teams, matchType, status, venue, date } = match;
 
-  navigation.setOptions({ headerTitle: `Match Details` });
+  useEffect(() => {
+    navigation.setOptions({ headerTitle: `Match Details` });
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>

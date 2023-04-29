@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -14,7 +14,9 @@ function SnookerDetails({ navigation, route }: any) {
     tournament_name,
   } = match;
 
-  navigation.setOptions({ headerTitle: `Match Details` });
+  useEffect(() => {
+    navigation.setOptions({ headerTitle: `Match Details` });
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>

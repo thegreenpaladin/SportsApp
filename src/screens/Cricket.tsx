@@ -8,14 +8,11 @@ import {
   StyleSheet,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import cricketData from "../../assets/cricketApiData";
 
 function Cricket({ navigation }: any) {
   const [matches, setMatches] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    // setMatches(JSON.parse(cricketData));
-    // setLoading(false);
     fetch(
       "https://api.cricapi.com/v1/matches?apikey=b82687f1-3cdf-4dc0-bf23-f8b3e03f1831&offset=0"
     )
